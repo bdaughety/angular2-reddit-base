@@ -76,8 +76,24 @@ class RedditApp {
   `
 })
 class RedditArticle {
-  constructor() {
+  votes: number;
+  title: string;
+  link: string;
 
+  constructor() {
+    this.votes = 10;
+    this.title = 'Angular 2';
+    this.link = 'http://angular.io';
+  }
+
+  voteUp() {
+    this.votes += 1;
+    return false;
+  }
+
+  voteDown() {
+    this.votes -= 1;
+    return false;
   }
 }
 
